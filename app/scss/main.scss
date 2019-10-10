@@ -22,7 +22,7 @@
 
 ::-webkit-scrollbar-thumb {
   width: 6px;
-  background-color: black;
+  background-color: $accent;
   cursor: pointer;
   border-radius: 0;
   box-shadow: 0px 1px 1px #fff inset;
@@ -40,7 +40,7 @@
 .container {
   width: 100%;
   min-width: 320px;
-  max-width: calc(100% - 269px);
+  max-width: calc(100% - 269px*2);
   margin: 0 auto;
   position: relative;
 }
@@ -151,6 +151,34 @@ svg {
   }
 }
 
+.title {
+	font-family: $heading;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	line-height: 100%;
+	font-weight: 700;
+}
+
+.header {
+  color: white;
+  width: 100%;
+	min-height: 600px;
+  height: 92vh;
+  position: relative;
+  z-index: 1;
+  background-color: $bg-header;
+	background-image: url(../img/bg.png);
+	background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.nav {
+	display: flex;
+	flex-flow: row nowrap;
+	z-index: 3;
+}
+
 .menu {
   display: flex;
   flex-flow: row wrap;
@@ -164,81 +192,143 @@ svg {
   }
 }
 
-.header {
-  color: white;
-  width: 100%;
-  min-height: 1080px;
-  position: relative;
-  z-index: 1;
-  background-color: black;
-  background-image: url(../img/bgpic.jpg);
-  background-position: right;
-  background-size: cover;
-}
-
 .logo__block {
+	display: flex;
+	flex-flow: row nowrap;
+	flex-basis: 210px;
+	align-items: center;
+	justify-content: space-between;
   user-select: none;
-  will-change: transform;
-  img {
+  will-change: transform, color;
+  svg {
     &:hover {
       transform: scale(1.1);
-      transition: all 0.3s ease-in-out;
+      transition: all 0.3s linear;
     }
-  }
-}
-/*
-.header__social__list {
-  display: flex;
-  justify-content: space-between;
+	}
+	.logo__text {
+		margin-left: 16px;
+		font-family: $heading;
+		font-size: 25px;
+		line-height: 100%;
+		font-weight: 700;
+			span {
+				margin-top: 6px;
+				display: block;
+				font-family: 'Roboto';
+				font-size: 12px;
+				line-height: 100%;
+				font-weight: normal;
+				color: #788891;
+				}
+			&:hover {
+				color: $accent;
+				transition: all 0.3s linear;
+			}
+	}
 }
 
-.header__phone {
-  will-change: transform;
-  white-space: nowrap;
-  &:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
-  }
-}*/
+.header__right {
+	display: flex;
+	flex-flow: row nowrap;
+	flex-basis: 50%;
+	justify-content: space-between;
+	align-items: center;
+}
 
 .header__link {
   color: white;
-  font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+	margin-right: 20px;
   &:hover {
-    color: white;
+    color: $accent;
     text-decoration: none;
-    transition: all 0.25s ease-in-out;
+    transform: scale(1.1);
+		transition: all 0.4s linear;
   }
-  &.social__icon__link {
-    max-width: 30px;
-    max-height: 30px;
-    position: relative;
-    font-size: 0;
-    display: inline-block;
-    margin-right: 3%;
-    transition: all 0.6s ease;
+  &.header__icon__link {
+    transition: all 0.6s linear;
     cursor: pointer;
     will-change: transform;
-    &:hover {
-      transform: scale(1.1);
-      transition: all 0.3s ease-in-out;
-    }
-    &:nth-child(1) {
-      width: 30px;
-      background-image: url(../img/search_icon.png);
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-    &:nth-child(2) {
-      width: 30px;
-      background-image: url(../img/telegram.png);
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-
+		}
 }
+
+.btn {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	white-space: nowrap;
+	font-family: $heading;
+	font-size: 16px;
+	line-height: 100%;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.btn--order {
+	font-size: 14px;
+	padding: 10px 24px;
+	&:hover {
+		color: white;
+		background-color: $accent;
+	}
+	&:active {
+		box-shadow: 0 1px 2px 0 #0033a1 inset;
+    top: 2px;
+	}
+}
+
+.btn--blue {
+	font-size: 14px;
+	padding: 15px 20px;
+	max-width: 406px;
+	color: white;
+	background-color: $accent;
+	&:hover {
+		color:  $accent;
+		background-color: white;
+	}
+	&:active {
+		box-shadow: 0 1px 2px 0 $accent inset;
+    top: 2px;
+	}
+}
+
+.promo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	.promo__img {
+		width: 100%;
+		&::before {
+				content: '';
+				background-image: url(../img/plata.png);
+				background-repeat: no-repeat;
+				background-position: right;
+				background-size: contain;
+				width: 84%;
+				height: 236%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 2;
+		}}
+	.promo__title {
+		font-size: 80px;
+		color: white;
+	}
+	.promo__desc {
+		font-size: 22px;
+		line-height: 140%;
+	}
+	.promo__inner {
+		max-width: 60%;
+	}
 }
 
 @import "media"; // Always at the end
