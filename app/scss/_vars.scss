@@ -1,0 +1,45 @@
+
+$default-font: 'PT Mono';
+$heading: 'Roboto Condensed';
+
+
+// vars
+$bg: white;
+$bg-header: #1B2D37;
+$text: #666666;
+$accent: #00B2FF;
+$wrong: red;
+
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 10px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+
+$gutter: $grid-gutter-width;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+		5: ($spacer * 3),
+		6: ($spacer * 5),
+		7: ($spacer * 7),
+		8: ($spacer * 11),
+		9: ($spacer * 12)
+  ),
+  $spacers
+);
