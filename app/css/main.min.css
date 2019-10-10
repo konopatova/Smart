@@ -19638,6 +19638,8 @@ html {
   min-width: 320px;
   max-width: -webkit-calc(100% - 269px*2);
   max-width: calc(100% - 269px*2);
+  max-width: 1400px;
+  padding: 0 15px;
   margin: 0 auto;
   position: relative;
 }
@@ -19785,6 +19787,7 @@ svg.hidden-sprite {
   -webkit-flex-flow: row nowrap;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  margin-bottom: 30px;
   z-index: 3;
 }
 
@@ -19813,6 +19816,7 @@ svg.hidden-sprite {
 }
 
 .logo__block {
+  white-space: nowrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19953,6 +19957,7 @@ svg.hidden-sprite {
 }
 
 .btn--blue {
+  margin-left: 90px;
   font-size: 14px;
   padding: 15px 20px;
   max-width: 406px;
@@ -19978,11 +19983,11 @@ svg.hidden-sprite {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 1;
 }
 
 .promo .promo__img {
-  width: 100%;
+  width: 50%;
+  z-index: 1;
 }
 
 .promo .promo__img::before {
@@ -19991,15 +19996,17 @@ svg.hidden-sprite {
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
-  width: 84%;
-  height: 236%;
+  min-width: 460px;
+  min-height: 340px;
+  width: 134%;
+  height: 373%;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: -1;
 }
 
 .promo .promo__title {
@@ -20008,12 +20015,27 @@ svg.hidden-sprite {
 }
 
 .promo .promo__desc {
+  padding-left: 90px;
   font-size: 22px;
   line-height: 140%;
+  position: relative;
+  font-weight: 300;
+  margin: 46px 0px;
+}
+
+.promo .promo__desc:before {
+  content: '';
+  width: 66px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 12px;
 }
 
 .promo .promo__inner {
-  max-width: 60%;
+  max-width: 55%;
+  z-index: 4;
 }
 
 /*==========  Desktop First  ==========*/

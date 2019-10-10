@@ -41,6 +41,8 @@
   width: 100%;
   min-width: 320px;
   max-width: calc(100% - 269px*2);
+	max-width: 1400px;
+	padding: 0 15px;
   margin: 0 auto;
   position: relative;
 }
@@ -176,6 +178,7 @@ svg {
 .nav {
 	display: flex;
 	flex-flow: row nowrap;
+	margin-bottom: 30px;
 	z-index: 3;
 }
 
@@ -193,6 +196,7 @@ svg {
 }
 
 .logo__block {
+	white-space: nowrap;
 	display: flex;
 	flex-flow: row nowrap;
 	flex-basis: 210px;
@@ -281,6 +285,7 @@ svg {
 }
 
 .btn--blue {
+	margin-left: 90px;
 	font-size: 14px;
 	padding: 15px 20px;
 	max-width: 406px;
@@ -301,33 +306,49 @@ svg {
   top: 50%;
   left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 1;
 	.promo__img {
-		width: 100%;
+		width: 50%;
+		z-index: 1;
 		&::before {
 				content: '';
 				background-image: url(../img/plata.png);
 				background-repeat: no-repeat;
 				background-position: right;
 				background-size: contain;
-				width: 84%;
-				height: 236%;
+				min-width: 460px;
+				min-height: 340px;
+				width: 134%;
+				height: 373%;
 				position: absolute;
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
-				z-index: 2;
+				z-index: -1;
 		}}
 	.promo__title {
 		font-size: 80px;
 		color: white;
 	}
 	.promo__desc {
+		padding-left: 90px;
 		font-size: 22px;
 		line-height: 140%;
+		position: relative;
+		font-weight: 300;
+		margin: 46px 0px;
+		&:before {
+			content: '';
+			width: 66px;
+			height: 2px;
+			background-color: white;
+			position: absolute;
+			left: 0;
+			top: 12px;
+		}
 	}
 	.promo__inner {
-		max-width: 60%;
+		max-width: 55%;
+		z-index: 4;
 	}
 }
 
