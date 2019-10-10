@@ -20458,7 +20458,7 @@ svg.hidden-sprite {
   }
   .promo .promo__inner {
     padding-top: 207px;
-    padding-left: 0;
+    padding-left: 20px;
     max-width: 95%;
   }
   .promo .btn--blue {
