@@ -4,23 +4,24 @@
 
 // ≥1200px
 @include media-breakpoint-down(lg) {
-	.header__right {
-		flex-basis: 60%;
-	}
+    .header__right {
+        flex-basis: 60%;
+    }
 }
 
 // ≥992px
 @include media-breakpoint-down(md) {
-	.header__right {
-		flex-basis: 25%;
-		.header__icon__link {
-			font-size: 0;
-		}
-		svg.icon {
-			width: 26px;
-		}
-	}
+    .header__right {
+        flex-basis: 25%;
+        .header__icon__link {
+            font-size: 0;
+        }
+        svg.icon {
+            width: 26px;
+        }
+    }
 }
+
 
 // ≥768px
 @include media-breakpoint-down(sm) {
@@ -127,6 +128,28 @@
 		}
 	}
 
+	.burger__block {
+		align-self: center;
+		margin-left: 35%;
+	}
+
+	.header {
+		min-height: 650px;
+	}
+
+	.logo__block {
+		svg {
+			width: 38px;
+			height: 38px;
+		}
+		.logo__text {
+			font-size: 0;
+			span {
+				font-size: 0;
+			}
+		}
+	}
+
 	.about {
 		.digits {
 			display: none;
@@ -135,11 +158,6 @@
 				background: none;
 			}
 		}
-	}
-
-	.burger__block {
-		align-self: center;
-		margin-left: 35%;
 	}
 
 	.advantages {
@@ -208,22 +226,7 @@
 		}
 	}
 
-	.header {
-		min-height: 650px;
-	}
 
-	.logo__block {
-		svg {
-			width: 38px;
-			height: 38px;
-		}
-		.logo__text {
-			font-size: 0;
-			span {
-				font-size: 0;
-			}
-		}
-	}
 }
 
 /*==========  Mobile First  ==========*/

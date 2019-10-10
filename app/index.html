@@ -76,6 +76,8 @@
     </head>
     <body>
         <header class="header">
+					
+				<div class="overlay"></div>
             <div class="nav container">
                 <div class="logo__block">
                     <svg class="icon icon-logo" width="52" height="70">
@@ -134,12 +136,14 @@
                         производство и монтаж, поставка комплектующих, блоков и модулей
                     </p>
                     <button
-                        href="#"
+												href="#"
+												id="order"
                         class="header__link btn--blue btn d-none d-lg-block d-xl-block d-md-block d-sm-block">
                         Получить бесплатную консультацию
                     </button>
                     <button
-                        href="#"
+												href="#"
+												id="order"
                         class="header__link btn--blue btn d-block d-lg-none d-md-none d-sm-none">
                         Бесплатная консультация
                     </button>
@@ -215,14 +219,42 @@
             </section>
         </main>
 
-        <footer class="footer"></footer>
+				<footer class="footer"></footer>	
+
+
+									<form class="form__section" action="https://echo.htmlacademy.ru" method="">
+											<fieldset>
+													<legend>Закажите звонок</legend>
+													<p class="form__desc">
+															Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+													<div class="form-group">
+														<label for="name"></label>
+															<input type="text" name="name" id="name" placeholder="Имя" class="form__input">
+													</div>
+													<div class="form-group">
+														<label for="phone"></label>
+															<input type="tel" name="tel" id="tel" placeholder="Телефон" class="form__input">
+													</div>
+													<div class="form-group">
+														<label for="textarea"></label>
+														<textarea class="textarea" name="textarea" id="textarea" placeholder="Ваш вопрос"></textarea>
+													</div>
+													<button type="submit" class="btn--submit btn--bordered btn">
+															Отправить
+													</button>
+													<div class="checkbox-group">
+														<input class="checkbox" type="checkbox" name="agree" id="agree">
+													<label for="agree">Я согласен на обработку персональных данных</label>
+												</div>
+										
+											</fieldset>
+											<button class="close" id="close"></button>
+									</form>
+							
+
 
         <script src="js/scripts.min.js"></script>
-        <script
-            async="async"
-            defer="defer"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC01LPskwCDOvjdqOVR4VDbif5caohFjA4&callback=initMap"
-            type="text/javascript"></script>
+    
 
         <svg class="hidden-sprite" xmlns="http://www.w3.org/2000/svg">
             <symbol id="logo" viewbox="0 0 52 52">
