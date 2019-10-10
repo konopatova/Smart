@@ -178,6 +178,7 @@ svg {
 .nav {
 	display: flex;
 	flex-flow: row nowrap;
+	max-height: 100px;
 	margin-bottom: 30px;
 	z-index: 3;
 }
@@ -416,7 +417,7 @@ svg {
 			content: '';
 			position: absolute;
 			top: 0;
-			left: -19%;
+			left: -2%;
 			width: 326px;
 			height: 300px;
 			background-image: url(../img/2005.png);
@@ -446,9 +447,10 @@ svg {
 	.menu {
 		width: 300px;
 		padding: 30px;
-		background-color: $accent;
+		background-color: gray;
 		display: flex;
 		flex-flow: column wrap;
+		border-radius: 10px;
 	}
 	.menu__item {
 		padding: 10px 10px;
@@ -491,6 +493,7 @@ svg {
 	margin-left: auto;
 	display: block;
 	cursor: pointer;
+	margin-right: 20px;
 }
 
 #menuToggle:checked ~ .menu__mobile {
