@@ -28,10 +28,6 @@
 	box-shadow: 0px 1px 1px #fff inset;
 }
 
-::placeholder {
-	color: #444444;
-}
-
 ::selection {
 	background-color: $accent;
 	color: white;
@@ -441,51 +437,53 @@ svg {
 }
 
 .menu__mobile {
-	opacity: 0;
-	user-select: none;
-	transition: opacity 0.3s linear;
-	position: relative;
-	.menu {
-		right: 2vw;
-		width: 300px;
-		padding: 30px;
-		background-color: gray;
-		display: flex;
-		flex-flow: column wrap;
-		border-radius: 10px;
-	}
-	.menu__item {
-		padding: 10px 10px;
-		&:hover {
-			background-color: $bg-header;
-		}
-	}
+    opacity: 0;
+    user-select: none;
+    transition: opacity 0.3s linear;
+    position: relative;
+    .menu {
+        right: 2vw;
+        width: 300px;
+        padding: 30px;
+        background-color: gray;
+        display: flex;
+        flex-flow: column wrap;
+        border-radius: 10px;
+    }
+    .menu__item {
+        padding: 10px;
+        &:hover {
+            background-color: $bg-header;
+        }
+    }
 }
 
+
 .burger__label {
-	user-select: none;
-	cursor: pointer;
-	display: block;
-	width: 37px;
-	height: 14px;
-	padding-bottom: 18px;
-	box-sizing: content-box;
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: space-between;
-	align-content: space-between;
-	z-index: 5;
-	.burger__line {
-		&:before {
-			content: '';
-			position: absolute;
-			display: block;
-			width: 37px;
-			height: 1px;
-			background-color: white;
-		}
-	}
+    user-select: none;
+    cursor: pointer;
+    display: block;
+    width: 37px;
+    height: 14px;
+    padding-bottom: 18px;
+    box-sizing: content-box;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    z-index: 5;
+    .burger__line {
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 37px;
+            height: 1px;
+            background-color: white;
+        }
+    }
 }
+
 
 .burger__block {
 	user-select: none;
@@ -514,5 +512,128 @@ svg {
 	visibility: visible;
 	transition: transform 0.3s linear;
 }
+
+.overlay {
+		display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+.form__section {
+    display: none;
+    position: relative;
+    color: white;
+    position: absolute;
+    padding: 38px;
+    max-width: 490px;
+    top: 50%;
+    left: 50%;
+		transform: translate(-50%, -50%);    
+		background-color: $accent;
+		z-index: 6;
+		overflow: auto;
+    legend {
+        margin-bottom: 24px;
+        font-size: 28px;
+        line-height: 140%;
+    }
+    .btn--bordered {
+        width: 100%;
+        border: 1px solid white;
+        color: white;
+				margin-bottom: 34px;
+				&:hover {
+					background-color: $bg-header;
+				}
+    }
+    .form__desc {
+        max-width: 90%;
+    }
+    .form__input,
+    .textarea {
+        color: white;
+        width: 100%;
+        background-color: rgba(white, $alpha: 0.1);
+        border-radius: 4px;
+        border: none;
+				padding: 14px 24px;
+				transition: all 0.3s linear;
+				&:hover {
+					background-color: $bg-header;
+				}
+    }
+    .checkbox-group {
+        width: 90%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        .checkbox {
+						visibility: hidden;
+						position: absolute;
+        }
+        label {
+            width: 86%;
+            margin-left: auto;
+            font-size: 14px;
+            line-height: 16px;
+            position: relative;
+            cursor: pointer;
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 16px;
+                height: 16px;
+                transform: translateX(-52px);
+                border: 1px solid white;
+                cursor: pointer;
+                background: transparent;
+            }
+        }
+        .checkbox:checked ~ label:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            background-image: url("../img/tick.png");
+            background-repeat: no-repeat;
+            background-position: 2px;
+            transform: translateX(-51px);
+            cursor: pointer;
+            z-index: 6;
+        }
+    }
+    #close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 20px;
+        height: 20px;
+        background-image: url("../img/close.png");
+				background-repeat: no-repeat;
+				background-color: transparent;
+    }
+}
+
+.open {
+	display: block;
+}
+
+::placeholder {
+    color: white;
+}
+
 
 @import 'media'; // Always at the end
