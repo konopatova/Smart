@@ -22,7 +22,7 @@
 // ≥768px
 @include media-breakpoint-down(sm) {
 	.header__right {
-		flex-basis: 25%;
+		flex-basis: 15%;
 		.header__icon__link {
 			font-size: 0;
 		}
@@ -34,10 +34,63 @@
 		}
 	}
 
+	.burger__block {
+		align-self: center;
+		margin-left: 45%;
+	}
+
 	.logo__block {
 		svg {
 			width: 52px;
 			height: 52px;
+		}
+	}
+
+	.promo {
+		.promo__title {
+			font-size: 60px;
+			line-height: 70px;
+		}
+		.promo__img {
+			width: 100%;
+			&::before {
+				content: '';
+				background-image: url(../img/plata.png);
+				background-repeat: no-repeat;
+				background-position: right;
+				background-size: contain;
+				min-width: 460px;
+				min-height: 340px;
+				width: 163%;
+				height: 373%;
+				position: absolute;
+				top: 33%;
+				left: 52%;
+				transform: translate(-50%, -50%);
+				z-index: -1;
+			}
+		}
+		.promo__desc {
+			padding-left: 48px;
+			font-size: 18px;
+			line-height: 156%;
+			&:before {
+				content: '';
+				width: 33px;
+				height: 2px;
+				background-color: white;
+				position: absolute;
+				left: 0;
+				top: 12px;
+			}
+		}
+		.promo__inner {
+			padding-left: 74px;
+			padding-top: 130px;
+			max-width: 70%;
+		}
+		.btn--blue {
+			margin-left: 48px;
 		}
 	}
 
@@ -79,6 +132,11 @@
 				background: none;
 			}
 		}
+	}
+
+	.burger__block {
+		align-self: center;
+		margin-left: 35%;
 	}
 
 	.advantages {
@@ -139,6 +197,7 @@
 		}
 		.promo__inner {
 			padding-top: 207px;
+			padding-left: 0;
 			max-width: 95%;
 		}
 		.btn--blue {
@@ -147,7 +206,7 @@
 	}
 
 	.header {
-		height: 400px;
+		min-height: 650px;
 	}
 
 	.logo__block {

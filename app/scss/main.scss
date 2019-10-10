@@ -444,7 +444,9 @@ svg {
 	opacity: 0;
 	user-select: none;
 	transition: opacity 0.3s linear;
+	position: relative;
 	.menu {
+		right: 2vw;
 		width: 300px;
 		padding: 30px;
 		background-color: gray;
