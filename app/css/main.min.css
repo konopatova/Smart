@@ -19636,8 +19636,8 @@ html {
 .container {
   width: 100%;
   min-width: 320px;
-  max-width: -webkit-calc(100% - 269px*2);
-  max-width: calc(100% - 269px*2);
+  max-width: -webkit-calc(100% - 269px * 2);
+  max-width: calc(100% - 269px * 2);
   max-width: 1400px;
   padding: 0 15px;
   margin: 0 auto;
@@ -19729,7 +19729,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 button,
-input[type="range"] {
+input[type='range'] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -20036,6 +20036,85 @@ svg.hidden-sprite {
 .promo .promo__inner {
   max-width: 55%;
   z-index: 4;
+}
+
+.advantages {
+  padding-top: 110px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.advantages .advantages__item {
+  padding: 44px;
+  max-width: 570px;
+  border: 1px #ebebeb solid;
+  border-left: 2px #00B2FF solid;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  background-color: white;
+  will-change: background-color, color, fill;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.advantages .advantages__item .advantages__title {
+  font-family: "Roboto Condensed";
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 400;
+  color: #00B2FF;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.advantages .advantages__item .advantages__desc {
+  font-size: 16px;
+  margin-top: 18px;
+}
+
+.advantages .advantages__item:hover {
+  color: white;
+  background-color: #00B2FF;
+}
+
+.advantages .advantages__item:hover .advantages__title {
+  color: white;
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.advantages .advantages__item:hover .icon {
+  color: white;
+  fill: white;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.main {
+  background-color: white;
+  background-image: url(../img/bg-white.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
 }
 
 /*==========  Desktop First  ==========*/

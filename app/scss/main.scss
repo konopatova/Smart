@@ -1,122 +1,122 @@
-@import "vars";
+@import 'vars';
 
-@import "fonts";
+@import 'fonts';
 
-@import "libs";
+@import 'libs';
 
-@import "mixins";
+@import 'mixins';
 
 ::-webkit-scrollbar {
-  margin: 10px;
-  width: auto;
-  height: 6px;
-  padding: 10px;
-  background-color: #f5f5f5;
-  cursor: pointer;
+	margin: 10px;
+	width: auto;
+	height: 6px;
+	padding: 10px;
+	background-color: #f5f5f5;
+	cursor: pointer;
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #f5f5f5;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
-  width: 6px;
-  background-color: $accent;
-  cursor: pointer;
-  border-radius: 0;
-  box-shadow: 0px 1px 1px #fff inset;
+	width: 6px;
+	background-color: $accent;
+	cursor: pointer;
+	border-radius: 0;
+	box-shadow: 0px 1px 1px #fff inset;
 }
 
 ::placeholder {
-  color: #444444;
+	color: #444444;
 }
 
 ::selection {
-  background-color: black;
-  color: white;
+	background-color: black;
+	color: white;
 }
 
 .container {
-  width: 100%;
-  min-width: 320px;
-  max-width: calc(100% - 269px*2);
+	width: 100%;
+	min-width: 320px;
+	max-width: calc(100% - 269px * 2);
 	max-width: 1400px;
 	padding: 0 15px;
-  margin: 0 auto;
-  position: relative;
+	margin: 0 auto;
+	position: relative;
 }
 
 html,
 body {
-  height: 100%;
+	height: 100%;
 }
 
 :active,
 :hover,
 :focus {
-  outline: 0 !important;
-  outline-offset: 0 !important;
-  box-shadow: none;
+	outline: 0 !important;
+	outline-offset: 0 !important;
+	box-shadow: none;
 }
 
 body {
-  font-size: 16px;
-  min-width: 320px;
-  position: relative;
-  line-height: 120%;
-  font-family: $default-font;
-  font-size: 16px;
-  overflow-x: hidden;
-  color: $text;
-  background-color: $bg;
-  input,
-  textarea {
-    border: grey 2px solid;
-    outline: none;
-    &:focus:required:invalid {
-      color: $wrong;
-      border: $wrong 2px solid;
-    }
-    &:required:valid {
-      border: green 2px solid;
-    }
-  }
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 120%;
+	font-family: $default-font;
+	font-size: 16px;
+	overflow-x: hidden;
+	color: $text;
+	background-color: $bg;
+	input,
+	textarea {
+		border: grey 2px solid;
+		outline: none;
+		&:focus:required:invalid {
+			color: $wrong;
+			border: $wrong 2px solid;
+		}
+		&:required:valid {
+			border: green 2px solid;
+		}
+	}
 }
 
 main {
-  padding-bottom: 100px;
-  /*Высота футера*/
+	padding-bottom: 100px;
+	/*Высота футера*/
 }
 
 footer {
-  margin-top: -100px;
-  /*Минус Высота футера*/
-  height: 100px;
-  /*Высота футера*/
+	margin-top: -100px;
+	/*Минус Высота футера*/
+	height: 100px;
+	/*Высота футера*/
 }
 
 .img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  &.img-width {
-    width: 100%;
-  }
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
 }
 
 b,
 strong {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 li {
-  list-style: none;
+	list-style: none;
 }
 
 ul {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 h1,
@@ -125,32 +125,32 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
-  font-weight: normal;
+	margin-top: 0;
+	font-weight: normal;
 }
 
 button,
-input[type="range"] {
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+input[type='range'] {
+	appearance: none;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
 }
 
 a {
-  text-decoration: none;
-  color: $text;
-  &:hover {
-    text-decoration: none;
-    color: white;
-    transition: all 0.25s ease-in-out;
-  }
+	text-decoration: none;
+	color: $text;
+	&:hover {
+		text-decoration: none;
+		color: white;
+		transition: all 0.25s ease-in-out;
+	}
 }
 
 svg {
-  &.hidden-sprite {
-    display: none;
-  }
+	&.hidden-sprite {
+		display: none;
+	}
 }
 
 .title {
@@ -162,17 +162,17 @@ svg {
 }
 
 .header {
-  color: white;
-  width: 100%;
+	color: white;
+	width: 100%;
 	min-height: 600px;
-  height: 92vh;
-  position: relative;
-  z-index: 1;
-  background-color: $bg-header;
+	height: 92vh;
+	position: relative;
+	z-index: 1;
+	background-color: $bg-header;
 	background-image: url(../img/bg.png);
 	background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+	background-position: center;
+	background-size: cover;
 }
 
 .nav {
@@ -183,16 +183,16 @@ svg {
 }
 
 .menu {
-  display: flex;
-  flex-flow: row wrap;
-  flex-wrap: nowrap;
-  .menu__item {
-    margin-right: 40px;
-    position: relative;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
+	display: flex;
+	flex-flow: row wrap;
+	flex-wrap: nowrap;
+	.menu__item {
+		margin-right: 40px;
+		position: relative;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
 }
 
 .logo__block {
@@ -202,13 +202,13 @@ svg {
 	flex-basis: 210px;
 	align-items: center;
 	justify-content: space-between;
-  user-select: none;
-  will-change: transform, color;
-  svg {
-    &:hover {
-      transform: scale(1.1);
-      transition: all 0.3s linear;
-    }
+	user-select: none;
+	will-change: transform, color;
+	svg {
+		&:hover {
+			transform: scale(1.1);
+			transition: all 0.3s linear;
+		}
 	}
 	.logo__text {
 		margin-left: 16px;
@@ -216,19 +216,19 @@ svg {
 		font-size: 25px;
 		line-height: 100%;
 		font-weight: 700;
-			span {
-				margin-top: 6px;
-				display: block;
-				font-family: 'Roboto';
-				font-size: 12px;
-				line-height: 100%;
-				font-weight: normal;
-				color: #788891;
-				}
-			&:hover {
-				color: $accent;
-				transition: all 0.3s linear;
-			}
+		span {
+			margin-top: 6px;
+			display: block;
+			font-family: 'Roboto';
+			font-size: 12px;
+			line-height: 100%;
+			font-weight: normal;
+			color: #788891;
+		}
+		&:hover {
+			color: $accent;
+			transition: all 0.3s linear;
+		}
 	}
 }
 
@@ -241,21 +241,21 @@ svg {
 }
 
 .header__link {
-  color: white;
+	color: white;
 	font-size: 16px;
 	line-height: 100%;
 	margin-right: 20px;
-  &:hover {
-    color: $accent;
-    text-decoration: none;
-    transform: scale(1.1);
+	&:hover {
+		color: $accent;
+		text-decoration: none;
+		transform: scale(1.1);
 		transition: all 0.4s linear;
-  }
-  &.header__icon__link {
-    transition: all 0.6s linear;
-    cursor: pointer;
-    will-change: transform;
-		}
+	}
+	&.header__icon__link {
+		transition: all 0.6s linear;
+		cursor: pointer;
+		will-change: transform;
+	}
 }
 
 .btn {
@@ -280,7 +280,7 @@ svg {
 	}
 	&:active {
 		box-shadow: 0 1px 2px 0 #0033a1 inset;
-    top: 2px;
+		top: 2px;
 	}
 }
 
@@ -292,39 +292,40 @@ svg {
 	color: white;
 	background-color: $accent;
 	&:hover {
-		color:  $accent;
+		color: $accent;
 		background-color: white;
 	}
 	&:active {
 		box-shadow: 0 1px 2px 0 $accent inset;
-    top: 2px;
+		top: 2px;
 	}
 }
 
 .promo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 	.promo__img {
 		width: 50%;
 		z-index: 1;
 		&::before {
-				content: '';
-				background-image: url(../img/plata.png);
-				background-repeat: no-repeat;
-				background-position: right;
-				background-size: contain;
-				min-width: 460px;
-				min-height: 340px;
-				width: 134%;
-				height: 373%;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				z-index: -1;
-		}}
+			content: '';
+			background-image: url(../img/plata.png);
+			background-repeat: no-repeat;
+			background-position: right;
+			background-size: contain;
+			min-width: 460px;
+			min-height: 340px;
+			width: 134%;
+			height: 373%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: -1;
+		}
+	}
 	.promo__title {
 		font-size: 80px;
 		color: white;
@@ -352,4 +353,57 @@ svg {
 	}
 }
 
-@import "media"; // Always at the end
+.advantages {
+	padding-top: 110px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	.advantages__item {
+		padding: 44px;
+		max-width: 570px;
+		border: 1px #ebebeb solid;
+		border-left: 2px $accent solid;
+		margin-right: 30px;
+		margin-bottom: 30px;
+		background-color: white;
+		will-change: background-color, color, fill;
+		cursor: pointer;
+		transition: all 0.3s linear;
+		.advantages__title {
+			font-family: $heading;
+			font-size: 24px;
+			line-height: 120%;
+			font-weight: 400;
+			color: $accent;
+			transition: all 0.3s linear;
+		}
+		.advantages__desc {
+			font-size: 16px;
+			margin-top: 18px;
+		}
+		&:hover {
+			color: white;
+			background-color: $accent;
+		}
+	}
+	.advantages__item:hover .advantages__title {
+		color: white;
+		transform: scale(1.05);
+	}
+	.advantages__item:hover .icon {
+		color: white;
+		fill: white;
+		transition: all 0.3s linear;
+		transform: scale(1.5);
+	}
+}
+
+.main {
+	background-color: white;
+	background-image: url(../img/bg-white.png);
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
+}
+
+@import 'media'; // Always at the end
