@@ -19795,6 +19795,16 @@ svg.hidden-sprite {
       -ms-user-select: none;
           user-select: none;
   will-change: transform, color;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.logo__block svg {
+  will-change: transform, color;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .logo__block svg:hover {
@@ -19812,6 +19822,9 @@ svg.hidden-sprite {
   font-size: 25px;
   line-height: 100%;
   font-weight: 700;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .logo__block .logo__text span {
@@ -19859,6 +19872,9 @@ svg.hidden-sprite {
   font-size: 16px;
   line-height: 100%;
   margin-right: 20px;
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
 }
 
 .header__link:hover {
@@ -20055,6 +20071,9 @@ svg.hidden-sprite {
 .advantages .advantages__item:hover {
   color: white;
   background-color: #00B2FF;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .advantages .advantages__item:hover .advantages__title {
@@ -20062,6 +20081,9 @@ svg.hidden-sprite {
   -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
           transform: scale(1.05);
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .advantages .advantages__item:hover .icon {
@@ -20073,6 +20095,12 @@ svg.hidden-sprite {
   -webkit-transform: scale(1.5);
       -ms-transform: scale(1.5);
           transform: scale(1.5);
+}
+
+.advantages .icon {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .main {
@@ -20225,6 +20253,9 @@ svg.hidden-sprite {
 #menuToggle:checked ~ .menu__mobile {
   opacity: 1;
   display: block;
+  -webkit-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
 }
 
 #menuToggle:checked + .burger__label .burger__line.line1::before {
@@ -20249,6 +20280,13 @@ svg.hidden-sprite {
   -o-transition: transform 0.3s linear;
   transition: transform 0.3s linear;
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.burger__line.line1::before,
+.burger__line.line2::before {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .overlay {
@@ -20279,6 +20317,9 @@ svg.hidden-sprite {
   background-color: #00B2FF;
   z-index: 6;
   overflow: auto;
+  -webkit-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
 }
 
 .form__section legend {
@@ -20296,6 +20337,9 @@ svg.hidden-sprite {
 
 .form__section .btn--bordered:hover {
   background-color: #1B2D37;
+  -webkit-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
 }
 
 .form__section .form__desc {
@@ -20319,6 +20363,9 @@ svg.hidden-sprite {
 .form__section .form__input:hover,
 .form__section .textarea:hover {
   background-color: #1B2D37;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .form__section .checkbox-group {

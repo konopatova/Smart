@@ -188,8 +188,12 @@ svg {
   justify-content: space-between;
   user-select: none;
   will-change: transform, color;
+  transition: all 0.3s linear;
 
   svg {
+    will-change: transform, color;
+    transition: all 0.3s linear;
+
     &:hover {
       transform: scale(1.1);
       transition: all 0.3s linear;
@@ -202,6 +206,7 @@ svg {
     font-size: 25px;
     line-height: 100%;
     font-weight: 700;
+    transition: all 0.3s linear;
 
     span {
       margin-top: 6px;
@@ -233,6 +238,7 @@ svg {
   font-size: 16px;
   line-height: 100%;
   margin-right: 20px;
+  transition: all 0.4s linear;
 
   &:hover {
     color: $accent;
@@ -399,12 +405,14 @@ svg {
     &:hover {
       color: white;
       background-color: $accent;
+      transition: all 0.3s linear;
     }
   }
 
   .advantages__item:hover .advantages__title {
     color: white;
     transform: scale(1.05);
+    transition: all 0.3s linear;
   }
 
   .advantages__item:hover .icon {
@@ -412,6 +420,10 @@ svg {
     fill: white;
     transition: all 0.3s linear;
     transform: scale(1.5);
+  }
+
+  .icon {
+    transition: all 0.3s linear;
   }
 }
 
@@ -526,6 +538,7 @@ svg {
 #menuToggle:checked ~ .menu__mobile {
   opacity: 1;
   display: block;
+  transition: opacity 0.3s linear;
 }
 
 #menuToggle:checked + .burger__label .burger__line.line1::before {
@@ -538,6 +551,11 @@ svg {
   transform: rotate(45deg) translateX(-10px);
   visibility: visible;
   transition: transform 0.3s linear;
+}
+
+.burger__line.line1::before,
+.burger__line.line2::before {
+  transition: all 0.3s linear;
 }
 
 .overlay {
@@ -564,6 +582,7 @@ svg {
   background-color: $accent;
   z-index: 6;
   overflow: auto;
+  transition: background-color 0.3s linear;
 
   legend {
     margin-bottom: 24px;
@@ -579,6 +598,7 @@ svg {
 
     &:hover {
       background-color: $bg-header;
+      transition: background-color 0.3s linear;
     }
   }
 
@@ -599,6 +619,7 @@ svg {
 
     &:hover {
       background-color: $bg-header;
+      transition: all 0.3s linear;
     }
   }
 
