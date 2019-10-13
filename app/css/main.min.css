@@ -2,7 +2,6 @@
 /* roboto-condensed-regular - cyrillic_latin */
 @import url(../libs/slick-carousel/slick/slick.css);
 @import url(../libs/fontawesome/font-awesome.min.css);
-@import url(../libs/css-hamburgers/hamburgers.css);
 @import url(../libs/owl/assets/owl.carousel.css);
 @font-face {
   font-family: 'Roboto Condensed';
@@ -19599,8 +19598,8 @@ html {
   background-color: #00B2FF;
   cursor: pointer;
   border-radius: 0;
-  -webkit-box-shadow: 0px 1px 1px #fff inset;
-          box-shadow: 0px 1px 1px #fff inset;
+  -webkit-box-shadow: 0 1px 1px #ffffff inset;
+          box-shadow: 0 1px 1px #ffffff inset;
 }
 
 ::-moz-selection {
@@ -19616,8 +19615,6 @@ html {
 .container {
   width: 100%;
   min-width: 320px;
-  max-width: -webkit-calc(100% - 269px * 2);
-  max-width: calc(100% - 269px * 2);
   max-width: 1400px;
   padding: 0 15px;
   margin: 0 auto;
@@ -19644,7 +19641,6 @@ body {
   position: relative;
   line-height: 120%;
   font-family: "PT Mono";
-  font-size: 16px;
   overflow-x: hidden;
   color: #666666;
   background-color: white;
@@ -19709,7 +19705,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 button,
-input[type='range'] {
+input[type="range"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -19751,7 +19747,7 @@ svg.hidden-sprite {
   position: relative;
   z-index: 1;
   background-color: #1B2D37;
-  background-image: url(../img/bg.png);
+  background-image: url("../img/bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -19821,7 +19817,7 @@ svg.hidden-sprite {
 .logo__block .logo__text span {
   margin-top: 6px;
   display: block;
-  font-family: 'Roboto';
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 12px;
   line-height: 100%;
   font-weight: normal;
@@ -19961,8 +19957,8 @@ svg.hidden-sprite {
 }
 
 .promo .promo__img::before {
-  content: '';
-  background-image: url(../img/plata.png);
+  content: "";
+  background-image: url("../img/plata.png");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
@@ -19990,11 +19986,11 @@ svg.hidden-sprite {
   line-height: 140%;
   position: relative;
   font-weight: 300;
-  margin: 46px 0px;
+  margin: 46px 0;
 }
 
-.promo .promo__desc:before {
-  content: '';
+.promo .promo__desc::before {
+  content: "";
   width: 66px;
   height: 2px;
   background-color: white;
@@ -20081,7 +20077,7 @@ svg.hidden-sprite {
 
 .main {
   background-color: white;
-  background-image: url(../img/bg-white.png);
+  background-image: url("../img/bg-white.png");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -20110,13 +20106,13 @@ svg.hidden-sprite {
 }
 
 .about .digits::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -2%;
   width: 326px;
   height: 300px;
-  background-image: url(../img/2005.png);
+  background-image: url("../img/2005.png");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: contain;
@@ -20177,7 +20173,6 @@ svg.hidden-sprite {
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
-  display: block;
   width: 37px;
   height: 14px;
   padding-bottom: 18px;
@@ -20202,8 +20197,8 @@ svg.hidden-sprite {
   z-index: 5;
 }
 
-.burger__label .burger__line:before {
-  content: '';
+.burger__label .burger__line::before {
+  content: "";
   position: absolute;
   display: block;
   width: 37px;
@@ -20232,7 +20227,7 @@ svg.hidden-sprite {
   display: block;
 }
 
-#menuToggle:checked + .burger__label .burger__line.line1:before {
+#menuToggle:checked + .burger__label .burger__line.line1::before {
   -webkit-transform: rotate(-45deg) translateX(-10px);
       -ms-transform: rotate(-45deg) translateX(-10px);
           transform: rotate(-45deg) translateX(-10px);
@@ -20244,7 +20239,7 @@ svg.hidden-sprite {
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 
-#menuToggle:checked + .burger__label .burger__line.line2:before {
+#menuToggle:checked + .burger__label .burger__line.line2::before {
   -webkit-transform: rotate(45deg) translateX(-10px);
       -ms-transform: rotate(45deg) translateX(-10px);
           transform: rotate(45deg) translateX(-10px);
@@ -20272,7 +20267,6 @@ svg.hidden-sprite {
 
 .form__section {
   display: none;
-  position: relative;
   color: white;
   position: absolute;
   padding: 38px;
@@ -20316,6 +20310,7 @@ svg.hidden-sprite {
   border-radius: 4px;
   border: none;
   padding: 14px 24px;
+  resize: none;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -20363,7 +20358,7 @@ svg.hidden-sprite {
   cursor: pointer;
 }
 
-.form__section .checkbox-group label:before {
+.form__section .checkbox-group label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -20378,7 +20373,7 @@ svg.hidden-sprite {
   background: transparent;
 }
 
-.form__section .checkbox-group .checkbox:checked ~ label:after {
+.form__section .checkbox-group .checkbox:checked ~ label::after {
   content: "";
   position: absolute;
   left: 0;
